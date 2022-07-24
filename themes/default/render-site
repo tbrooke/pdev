@@ -1,5 +1,7 @@
 #!/usr/bin/env bb
 ; vim: ft=clojure
+;; (require '[themes.default.pages.events :as event])
+(load-file "pages/events.clj")
 (load-file "common.bb")
 
 (defn logo [{:keys [site] :as opts}]
@@ -213,6 +215,7 @@
 
 (def pages
   {"/" landing-page
+   "/events/" event/event-page
    "/archive/" archive-page})
 
 (defn render-card [{:keys [site post] :as opts}]
